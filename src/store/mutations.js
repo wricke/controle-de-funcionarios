@@ -7,3 +7,7 @@ export function SAVE_USERS(state, users) {
 export function SAVE_DEPARTMENTS(state, departments) {
   Vue.set(state, 'departments', departments);
 }
+
+export function SAVE_USER(state, user) {
+  Vue.set(state, 'user', user);
+}
