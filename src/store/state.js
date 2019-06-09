@@ -6,7 +6,7 @@ export default {
       email: 'wrickee@gmail.com',
       password: 'wes123',
       department: 'xo8fgDLGZ4ykAzxQk',
-      admin: true,
+      isAdmin: true,
     },
   ],
   departments: [
