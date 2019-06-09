@@ -22,7 +22,7 @@ export default {
 
       const otherUser = this.users.find(({ password }) => password === this.password);
 
-      if (!user && !otherUser) return this.NotifyError('Usuário (e senha) inválidos!');
+      if (!user && !otherUser) return this.notifyError('Usuário (e senha) inválidos!');
 
       if (this.password === (user || {}).password) {
         this.$store.dispatch('SET_USER', user);
@@ -31,7 +31,7 @@ export default {
 
       const message = otherUser ? `Essa não é a senha do e-mail digitado. Você quis dizer "${otherUser.email}"?` : 'Senha inválida.';
 
-      return this.NotifyError(message);
+      return this.notifyError(message);
     },
   },
 };

@@ -1,13 +1,13 @@
 export default {
   methods: {
-    NotifyError(message) {
+    notifyError(message) {
       this.$q.notify({
         color: 'red-9',
         icon: 'warning',
         message,
       });
     },
-    Notify(message) {
+    notify(message) {
       this.$q.notify({
         color: 'positive',
         message,
