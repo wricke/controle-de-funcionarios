@@ -26,7 +26,7 @@ export default {
 
       if (this.password === (user || {}).password) {
         this.$store.dispatch('SET_USER', user);
-        return this.$router.push('home');
+        return this.$router.push('employees');
       }
 
       const message = otherUser ? `Essa não é a senha do e-mail digitado. Você quis dizer "${otherUser.email}"?` : 'Senha inválida.';
