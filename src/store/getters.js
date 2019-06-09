@@ -5,3 +5,7 @@ export function getUsers(state) {
 export function getDepartments(state) {
   return state.departments;
 }
+
+export function getUser(state) {
+  return state.user;
+}

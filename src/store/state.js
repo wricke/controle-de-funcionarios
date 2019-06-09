@@ -16,4 +16,5 @@ export default {
       name: 'Tecnologia',
     },
   ],
+  user: null,
 };
