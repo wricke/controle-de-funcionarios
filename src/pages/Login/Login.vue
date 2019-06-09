@@ -10,6 +10,7 @@
           lazy-rules
           :rules="[
             val => val && val.length > 0 || 'Por favor, digite seu e-mail.',
+            val => emailValidation(val) || 'Digite um e-mail válido.',
           ]"/>
         <q-input
           v-model="password"
