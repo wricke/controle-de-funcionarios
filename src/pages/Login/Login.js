@@ -1,9 +1,10 @@
 
 import { mapGetters } from 'vuex';
 import notify from 'src/mixins/notify';
+import validateEmail from 'src/mixins/validate-email';
 
 export default {
-  mixins: [notify],
+  mixins: [notify, validateEmail],
   data: () => ({
     email: null,
     password: null,
@@ -14,9 +15,6 @@ export default {
     }),
   },
   methods: {
-    emailValidation(email) {
-      return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    },
     onSubmit() {
       const user = this.users.find(({ email }) => email === this.email);
 
