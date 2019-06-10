@@ -13,6 +13,11 @@ const routes = [
         component: () => import('pages/Employees/Employees.vue'),
         beforeEnter: (to, from, next) => validateLogin(next),
       },
+      {
+        path: 'departments',
+        component: () => import('pages/Departments/Departments.vue'),
+        beforeEnter: (to, from, next) => validateLogin(next),
+      },
     ],
   },
 ];
