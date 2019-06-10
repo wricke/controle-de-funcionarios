@@ -1,10 +1,13 @@
 <template>
   <q-form
     @reset="$emit('input', false), form = {}"
-    @submit="$emit('submit', form)">
+    @submit="$emit('submit', form)"
+    ref="form">
     <q-input
+      autofocus
       v-model="form.name"
       label="Nome"
+      @keyup.enter="$refs.submitButton.click()"
       lazy-rules
       :rules="[
         val => val && val.length || 'O nome é obrigatório.',
@@ -15,6 +18,7 @@
     <q-input
       v-model="form.email"
       label="Email"
+      @keyup.enter="$refs.submitButton.click()"
       lazy-rules
       :rules="[
         val => val && val.length || 'O e-mail é obrigatório.',
@@ -26,6 +30,7 @@
     <q-input
       v-model="form.password"
       label="Senha"
+      @keyup.enter="$refs.submitButton.click()"
       type="password"
       lazy-rules
       :rules="[
@@ -59,8 +64,7 @@
       <q-btn
         color="positive"
         label="Salvar"
-        type="submit"
-        v-close-popup/>
+        type="submit"/>
     </div>
   </q-form>
 </template>

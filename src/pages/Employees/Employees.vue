@@ -48,7 +48,7 @@
       <q-card class="card-modal">
         <q-card-section>
           <h6> {{ selectedEmployee ? 'Editar funcionário' : 'Adicionar novo funcionário' }} </h6>
-          <employee-form :employee="selectedEmployee" @submit="saveUser"/>
+          <employee-form :employee="selectedEmployee" @submit="modal = false, saveUser"/>
         </q-card-section>
       </q-card>
     </q-dialog>
