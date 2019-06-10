@@ -15,7 +15,25 @@
             round
             dense
             icon="menu"
-            outline/>
+            outline
+          >
+            <q-menu cover auto-close>
+              <q-list style="min-width: 100px">
+                <q-item
+                  class="text-blue-10"
+                  clickable
+                  @click="$router.push('employees')">
+                  <q-item-section>Funcionários</q-item-section>
+                </q-item>
+                <q-item
+                  class="text-blue-10"
+                  clickable
+                  @click="$router.push('departments')">
+                  <q-item-section>Departamentos</q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
         </div>
       </q-header>
       <router-view />
