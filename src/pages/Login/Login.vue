@@ -2,8 +2,8 @@
   <q-page>
     <q-form
       class="q-gutter-md form-login q-mx-auto"
-      ref="login"
-      @submit="onSubmit">
+      @submit="onSubmit"
+      autofocus>
       <q-input
         v-model="email"
         label="E-mail"
