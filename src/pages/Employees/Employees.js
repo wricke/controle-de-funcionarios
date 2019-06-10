@@ -19,6 +19,10 @@ export default {
     }),
   },
   methods: {
+    /**
+     * @description Salvar funcionário.
+     * @param {Object} data Dados do funcionário.
+     */
     saveUser(data) {
       const { users } = this;
 
@@ -42,6 +46,10 @@ export default {
 
       this.$store.dispatch('SET_MODAL', false);
     },
+    /**
+     * @description Apagar funcionário.
+     * @param {String} _id Identificação do funcionário.
+     */
     removeUser(_id) {
       const { users } = this;
 
@@ -51,6 +59,10 @@ export default {
 
       this.$store.dispatch('SET_USERS', users);
     },
+    /**
+     * @description Passa o funcionário dentro do "v-for" para uma variável global.
+     * @param {Object} employee Funcionário selecionado.
+     */
     editUser(employee) {
       if (typeof employee.department === 'string') {
         const department = this.departments.find(x => x._id === employee.department);

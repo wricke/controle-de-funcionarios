@@ -20,6 +20,10 @@ export default {
     }),
   },
   methods: {
+    /**
+     * @description Salvar departamento.
+     * @param {Object} data Dados do departamento.
+     */
     saveDepartment(data) {
       const { departments } = this;
 
@@ -37,6 +41,10 @@ export default {
 
       this.$store.dispatch('SET_MODAL', false);
     },
+    /**
+     * @description Apagar departamento.
+     * @param {String} _id Identificação do departamento.
+     */
     removeDepartment(_id) {
       const { departments, users } = this;
 
@@ -60,6 +68,10 @@ export default {
         }
       });
     },
+    /**
+     * @description Passa o departamento dentro do "v-for" para uma variável global.
+     * @param {Object} department Departamento selecionado.
+     */
     editDepartment(department) {
       this.selectedDepartment = department;
 
