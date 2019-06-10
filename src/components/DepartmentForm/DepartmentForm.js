@@ -4,9 +4,7 @@ import validateEmail from 'src/mixins/validate-email';
 export default {
   mixins: [validateEmail],
   data: () => ({
-    form: {
-      isAdmin: true,
-    },
+    form: {},
   }),
   computed: {
     ...mapGetters({
