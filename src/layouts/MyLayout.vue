@@ -4,7 +4,7 @@
       <q-header v-show="$route.name !== 'login'">
         <div class="button-menu flex items-center justify-between">
           <q-btn
-            v-show="me.isAdmin"
+            v-show="(me || {}).isAdmin"
             class="bg-amber-8"
             text-color="white"
             label="Adicionar novo"
@@ -30,6 +30,13 @@
                   clickable
                   @click="$router.push('departments')">
                   <q-item-section>Departamentos</q-item-section>
+                </q-item>
+                <q-separator />
+                <q-item
+                  class="text-blue-10"
+                  clickable
+                  @click="$router.push({ name: 'login' }), $store.dispatch('SET_USER', null)">
+                  <q-item-section>Sair</q-item-section>
                 </q-item>
               </q-list>
             </q-menu>

@@ -47,6 +47,7 @@ module.exports = function (ctx) {
         'QToggle',
         'QCardSection',
         'QSelect',
+        'QSeparator',
       ],
 
       directives: [
