@@ -21,7 +21,8 @@
               round
               flat
               icon="more_vert"
-              :disabled="!me.isAdmin && me.email !== user.email">
+              :disabled="user._id === 'GvLKrZybfz9HKFetT' && me._id !== 'GvLKrZybfz9HKFetT'
+              || (!me.isAdmin && me._id !== user._id)">
               <q-menu cover auto-close>
                 <q-list>
                   <q-item
@@ -48,7 +49,9 @@
       <q-card class="card-modal">
         <q-card-section>
           <h6> {{ selectedEmployee ? 'Editar funcionário' : 'Adicionar novo funcionário' }} </h6>
-          <employee-form :employee="selectedEmployee" @submit="modal = false, saveUser"/>
+          <employee-form
+            :employee="JSON.parse(JSON.stringify(selectedEmployee))"
+            @submit="modal = false, saveUser"/>
         </q-card-section>
       </q-card>
     </q-dialog>
