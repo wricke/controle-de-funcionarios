@@ -41,7 +41,8 @@
     </div>
     <q-dialog
       v-if="modalValue"
-      v-model="modalValue">
+      v-model="modalValue"
+      @input="val => !val ? selectedEmployee = null : null">
       <q-card class="card-modal">
         <q-card-section>
           <h6> {{ selectedEmployee ? 'Editar funcionário' : 'Adicionar novo funcionário' }} </h6>

@@ -40,7 +40,7 @@ export default {
         this.$store.dispatch('SET_USER', data);
       }
 
-      this.modal = false;
+      this.$store.dispatch('SET_MODAL', false);
     },
     removeUser(_id) {
       const { users } = this;
@@ -63,7 +63,7 @@ export default {
 
       this.selectedEmployee = employee;
 
-      this.modal = true;
+      this.$store.dispatch('SET_MODAL', false);
     },
   },
 };
