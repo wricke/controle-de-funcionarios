@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <h4 class="q-pb-md text-weight-medium text-blue-10">Funcionários</h4>
     <div class="q-gutter-y-lg">
       <q-card
         v-for="user in users"
