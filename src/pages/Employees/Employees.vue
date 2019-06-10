@@ -59,9 +59,3 @@
 </template>
 
 <script src="./Employees.js" />
-
-<style lang="stylus" scoped>
-.card-modal
-  width 600px
-  max-width 80vw
-</style>
