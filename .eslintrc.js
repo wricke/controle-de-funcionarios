@@ -44,6 +44,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
     'linebreak-style': 'off',
+    'no-underscore-dangle': 'off',
 
     // allow console.log during development only
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
