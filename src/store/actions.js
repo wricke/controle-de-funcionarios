@@ -9,3 +9,7 @@ export function SET_DEPARTMENTS(context, departments) {
 export function SET_USER(context, user) {
   context.commit('SAVE_USER', user);
 }
+
+export function SET_MODAL(context, modal) {
+  context.commit('SAVE_MODAL', modal);
+}

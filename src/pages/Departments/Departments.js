@@ -1,10 +1,11 @@
 import { mapGetters } from 'vuex';
 import Random from 'meteor-random';
 import DepartmentForm from 'src/components/DepartmentForm/DepartmentForm.vue';
+import modalMixin from 'src/mixins/modal';
 
 export default {
+  mixins: [modalMixin],
   data: () => ({
-    modal: false,
     selectedDepartment: null,
   }),
   components: {

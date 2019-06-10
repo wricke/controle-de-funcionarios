@@ -1,10 +1,11 @@
 import { mapGetters } from 'vuex';
-import EmployeeForm from 'src/components/EmployeeForm/EmployeeForm.vue';
 import Random from 'meteor-random';
+import EmployeeForm from 'src/components/EmployeeForm/EmployeeForm.vue';
+import modalMixin from 'src/mixins/modal';
 
 export default {
+  mixins: [modalMixin],
   data: () => ({
-    modal: false,
     selectedEmployee: null,
   }),
   components: {

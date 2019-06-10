@@ -1,23 +1,19 @@
 <template>
   <q-page class="q-gutter-lg">
-    <div
-      v-show="me.isAdmin"
-      class="row justify-end">
-      <q-btn
-        label="Adicionar novo"
-        @click="selectedEmployee = null, modal = true"/>
-    </div>
     <div class="q-gutter-y-lg">
       <q-card
         v-for="user in users"
         :key="user._id">
         <q-card-section class="row items-center">
           <div class="col">
-            <h6> {{ user.name }} </h6>
+            <h6 class="text-blue-10"> {{ user.name }} </h6>
+            <p class="text-grey-6">
+              {{ departments.find(({ _id }) => _id === user.department).name }}
+            </p>
           </div>
           <div class="col-auto">
             <q-btn
-              color="grey-7"
+              color="amber-10"
               round
               flat
               icon="more_vert"
@@ -44,8 +40,8 @@
       </q-card>
     </div>
     <q-dialog
-      v-if="modal"
-      v-model="modal">
+      v-if="modalValue"
+      v-model="modalValue">
       <q-card class="card-modal">
         <q-card-section>
           <h6> {{ selectedEmployee ? 'Editar funcionário' : 'Adicionar novo funcionário' }} </h6>

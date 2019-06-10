@@ -11,3 +11,7 @@ export function SAVE_DEPARTMENTS(state, departments) {
 export function SAVE_USER(state, user) {
   Vue.set(state, 'user', user);
 }
+
+export function SAVE_MODAL(state, modal) {
+  Vue.set(state, 'modal', modal);
+}

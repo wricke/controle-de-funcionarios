@@ -1,12 +1,5 @@
 <template>
   <q-page class="q-gutter-lg">
-    <div
-      v-show="me.isAdmin"
-      class="row justify-end">
-      <q-btn
-        label="Adicionar novo"
-        @click="selectedDepartment = null, modal = true"/>
-    </div>
     <div class="q-gutter-y-lg">
       <q-card
         v-for="department in departments"
@@ -31,7 +24,7 @@
                     <q-item-section>Editar</q-item-section>
                   </q-item>
                   <q-item
-                    v-show="department.name !== 'Tecnologia' && me.isAdmin"
+                    v-show="me.isAdmin"
                     clickable
                     @click="removeDepartment(department._id)">
                     <q-item-section>Remover</q-item-section>
@@ -44,8 +37,8 @@
       </q-card>
     </div>
     <q-dialog
-      v-if="modal"
-      v-model="modal">
+      v-if="modalValue"
+      v-model="modalValue">
       <q-card class="card-modal">
         <q-card-section>
           <h6>
