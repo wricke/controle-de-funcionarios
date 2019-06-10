@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-gutter-lg">
+  <q-page>
     <div class="q-gutter-y-lg">
       <q-card
         v-for="user in users"
