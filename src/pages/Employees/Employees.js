@@ -38,6 +38,8 @@ export default {
       if (this.me._id === data._id) {
         this.$store.dispatch('SET_USER', data);
       }
+
+      this.modal = false;
     },
     removeUser(_id) {
       const { users } = this;

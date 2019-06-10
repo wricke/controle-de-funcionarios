@@ -1,6 +1,6 @@
 <template>
   <q-form
-    @reset="$emit('input', false), form = {}"
+    @reset="form = {}"
     @submit="$emit('submit', form)"
     ref="form">
     <q-input

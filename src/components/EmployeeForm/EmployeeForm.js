@@ -44,6 +44,6 @@ export default {
     },
   },
   created() {
-    if (this.employee) this.form = this.employee;
+    if (this.employee) this.form = JSON.parse(JSON.stringify(this.employee));
   },
 };
