@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
-      <q-header>
+      <q-header v-show="$route.name !== 'login'">
         <div class="button-menu flex items-center justify-between">
           <q-btn
             v-show="me.isAdmin"
