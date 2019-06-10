@@ -6,12 +6,12 @@
         :key="department._id">
         <q-card-section class="row items-center">
           <div class="col">
-            <h6> {{ department.name }} </h6>
-            <p> {{ department.code }} </p>
+            <h6 class="text-blue-10"> {{ department.name }} </h6>
+            <p class="text-grey-6"> {{ department.code }} </p>
           </div>
           <div class="col-auto">
             <q-btn
-              color="grey-7"
+              color="amber-10"
               round
               flat
               icon="more_vert"
