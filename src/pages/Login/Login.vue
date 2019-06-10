@@ -1,7 +1,7 @@
 <template>
-  <q-page>
+  <q-page class="page-login">
     <q-form
-      class="q-gutter-md form-login q-mx-auto"
+      class="q-gutter-md form-login shadow-1"
       @submit="onSubmit"
       autofocus>
       <q-input
@@ -32,7 +32,4 @@
 
 <script src="./Login.js" />
 
-<style lang="stylus">
-.form-login
-  max-width 600px
-</style>
+<style lang="stylus" src="./Login.styl"/>
