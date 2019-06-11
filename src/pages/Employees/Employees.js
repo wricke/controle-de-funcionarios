@@ -64,6 +64,7 @@ export default {
      * @param {Object} employee Funcionário selecionado.
      */
     editUser(employee) {
+      employee = JSON.parse(JSON.stringify(employee));
       if (typeof employee.department === 'string') {
         const department = this.departments.find(x => x._id === employee.department);
 
@@ -75,7 +76,7 @@ export default {
 
       this.selectedEmployee = employee;
 
-      this.$store.dispatch('SET_MODAL', false);
+      this.$store.dispatch('SET_MODAL', true);
     },
   },
 };
